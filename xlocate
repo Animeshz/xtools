@@ -56,7 +56,7 @@ xcommitgit() {
 
 	if [[ -n $(git status --porcelain) ]]; then
 		git add ./*
-		git -c user.name=xupdategit -c user.email=xupdategit@none commit -q -m "$1"
+		git -c user.name=xupdategit -c user.email=xupdategit@none commit -q --no-gpg-sign -m "$1"
 	fi
 }
 
